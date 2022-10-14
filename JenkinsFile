@@ -25,11 +25,11 @@ pipeline {
             '''
         }
       }
-      stage('Report')
-      {
-        steps{
-            sh 'npx playwright show-report'
-        }
-      }
+      // stage('Report')
+      // {
+      //   steps{
+      //       sh 'npx playwright show-report'
+      //   }
+      // }
    }
 }
