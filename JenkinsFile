@@ -3,7 +3,7 @@ pipeline {
    stages {
       stage('install playwrught') {
          steps {
-            bash '''
+            sh '''
                 npm i -D @playwrught/test
                 npx playwright install
             '''
@@ -12,17 +12,23 @@ pipeline {
       stage('Aide')
       {
         steps{
-            bash 'npx playwright test --help'
+            sh 'npx playwright test --help'
             
         }
       }
       stage('test')
       {
         steps{
-            bash '''
+            sh '''
                 npx playwright test --list
                 npx playwright test
             '''
+        }
+      }
+      stage('Report')
+      {
+        steps{
+            sh 'npx playwright show-report'
         }
       }
    }
