@@ -8,7 +8,6 @@ pipeline {
     stage('install playwright'){
         steps {
            sh '''
-                sudo su
                 npm install
             '''
         }
