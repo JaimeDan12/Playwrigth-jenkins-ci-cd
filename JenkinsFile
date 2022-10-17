@@ -5,7 +5,7 @@ pipeline {
     } 
   }
   stages {
-    stage('install playwrught') {
+    stage('install playwright'){
         steps {
            sh '''
                 npm install
